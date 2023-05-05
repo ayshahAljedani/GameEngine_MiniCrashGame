@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.5.0 commit date:2023-03-29, commit time:02:56, hash:1be25cfff18b</authoring_tool>
+    </contributor>
+    <created>2023-05-02T12:01:29</created>
+    <modified>2023-05-02T12:01:29</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Crystal-effect">
+      <profile_COMMON>
+        <newparam sid="Crystal_Texture_Vertex_Colors_png-surface">
+          <surface type="2D">
+            <init_from>Crystal_Texture_Vertex_Colors_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crystal_Texture_Vertex_Colors_png-sampler">
+          <sampler2D>
+            <source>Crystal_Texture_Vertex_Colors_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crystal_Texture_Vertex_Colors_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Crystal_Texture_Vertex_Colors_png" name="Crystal_Texture_Vertex_Colors_png">
+      <init_from>Crystal%20Texture%20Vertex%20Colors.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Crystal-material" name="Crystal">
+      <instance_effect url="#Crystal-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Power_Crystal-mesh" name="Power Crystal">
+      <mesh>
+        <source id="Power_Crystal-mesh-positions">
+          <float_array id="Power_Crystal-mesh-positions-array" count="42">0 12.2177 5.665 -5.665 12.2177 0 0 4.855705 0 0 12.2177 -5.665 5.665 12.2177 0 10.712 70.70471 10.712 13.081 89.92771 0 0 89.92771 13.081 -10.712 70.70471 10.712 -13.081 89.92771 0 0 108.7418 0 0 89.92771 -13.081 -10.712 70.70471 -10.712 10.712 70.70471 -10.712</float_array>
+          <technique_common>
+            <accessor source="#Power_Crystal-mesh-positions-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Power_Crystal-mesh-normals">
+          <float_array id="Power_Crystal-mesh-normals-array" count="72">-0.621116 -0.4779437 0.6211158 -0.621116 -0.4779437 -0.6211158 0.621116 -0.4779437 -0.6211158 0.621116 -0.4779437 0.6211158 0.6946119 -0.1871593 0.694612 0.9942514 -0.09488314 0.04961192 0.6759895 0.293387 0.6759899 0.04961192 -0.09488308 0.9942514 -0.04961192 -0.09488308 0.9942514 -0.6946119 -0.1871593 0.694612 -0.9942514 -0.09488314 0.04961192 -0.6759896 0.293387 0.6759898 -0.6345648 0.4411979 0.6345645 0.6345648 0.4411979 0.6345645 0.6345648 0.4411979 -0.6345645 -0.6345648 0.4411979 -0.6345645 -0.6759895 0.293387 -0.6759899 -0.9942514 -0.09488314 -0.04961192 -0.6946119 -0.1871593 -0.694612 -0.04961198 -0.09488308 -0.9942514 0.04961198 -0.09488308 -0.9942514 0.6759896 0.2933871 -0.6759898 0.9942514 -0.09488314 -0.04961192 0.6946119 -0.1871593 -0.694612</float_array>
+          <technique_common>
+            <accessor source="#Power_Crystal-mesh-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Power_Crystal-mesh-map-0">
+          <float_array id="Power_Crystal-mesh-map-0-array" count="144">0.95421 1.9077 0.95421 1.9214 0.96791 1.9214 0.95421 1.9214 0.96791 1.9214 0.95421 1.9077 0.96791 1.9214 0.95421 1.9077 0.95421 1.9214 0.96791 1.9214 0.95421 1.9077 0.95421 1.9214 0.95421 1.9214 0.96791 1.9214 0.96791 1.9077 0.96791 1.9214 0.95421 1.9214 0.95421 1.9077 0.95421 1.9077 0.96791 1.9077 0.95421 1.9214 0.96791 1.9077 0.96791 1.9214 0.95421 1.9077 0.95421 1.9214 0.95421 1.9077 0.96791 1.9214 0.96791 1.9077 0.96791 1.9214 0.95421 1.9214 0.96791 1.9214 0.95421 1.9077 0.96791 1.9077 0.96791 1.9077 0.95421 1.9214 0.96791 1.9214 0.95421 1.9214 0.96791 1.9077 0.95421 1.9077 0.96791 1.9077 0.96791 1.9214 0.95421 1.9214 0.96791 1.9214 0.95421 1.9214 0.96791 1.9077 0.95421 1.9077 0.95421 1.9214 0.96791 1.9077 0.96791 1.9214 0.96791 1.9077 0.95421 1.9214 0.96791 1.9214 0.95421 1.9214 0.95421 1.9077 0.95421 1.9214 0.96791 1.9077 0.96791 1.9214 0.96791 1.9214 0.95421 1.9077 0.96791 1.9077 0.95421 1.9077 0.96791 1.9214 0.95421 1.9214 0.95421 1.9214 0.95421 1.9077 0.96791 1.9077 0.96791 1.9077 0.96791 1.9214 0.95421 1.9077 0.96791 1.9214 0.95421 1.9214 0.96791 1.9077</float_array>
+          <technique_common>
+            <accessor source="#Power_Crystal-mesh-map-0-array" count="72" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Power_Crystal-mesh-vertices">
+          <input semantic="POSITION" source="#Power_Crystal-mesh-positions"/>
+        </vertices>
+        <triangles material="Crystal-material" count="24">
+          <input semantic="VERTEX" source="#Power_Crystal-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Power_Crystal-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Power_Crystal-mesh-map-0" offset="2" set="1"/>
+          <p>0 0 0 1 0 1 2 0 2 3 1 3 2 1 4 1 1 5 2 2 6 3 2 7 4 2 8 2 3 9 4 3 10 0 3 11 5 4 12 0 4 13 4 4 14 6 5 15 5 5 16 4 5 17 5 6 18 6 6 19 7 6 20 5 7 21 7 7 22 0 7 23 8 8 24 0 8 25 7 8 26 0 9 27 8 9 28 1 9 29 9 10 30 1 10 31 8 10 32 7 11 33 9 11 34 8 11 35 9 12 36 7 12 37 10 12 38 6 13 39 10 13 40 7 13 41 10 14 42 6 14 43 11 14 44 10 15 45 11 15 46 9 15 47 12 16 48 9 16 49 11 16 50 9 17 51 12 17 52 1 17 53 3 18 54 1 18 55 12 18 56 11 19 57 3 19 58 12 19 59 3 20 60 11 20 61 13 20 62 6 21 63 13 21 64 11 21 65 13 22 66 6 22 67 4 22 68 13 23 69 4 23 70 3 23 71</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Power_Crystal" name="Power Crystal" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Power_Crystal-mesh" name="Power Crystal">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crystal-material" target="#Crystal-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

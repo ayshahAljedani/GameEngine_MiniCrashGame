@@ -85,6 +85,23 @@ IF( WIN32 ) #MSVC Compiler library paths
                 #    debug "${AFTR_USERLAND_LIB_PATH}/mySampleLibraryNeededInThisModule_debug.lib"
                 #optimized "${CMAKE_SOURCE_DIR}/lib${AFTR_NBITS}/myLocalLib.lib" #Located in ../lib64/ or ../lib32/
                 #    debug "${CMAKE_SOURCE_DIR}/lib${AFTR_NBITS}/myLocalLib.lib"
+			optimized "${AFTR_USERLAND_LIB_PATH}/irrKlang.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/irrKlang.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysXCommon_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysXCommon_64.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysX_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysX_64.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysXFoundation_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysXFoundation_64.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysXCooking_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysXCooking_64.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysXExtensions_static_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysXExtensions_static_64.lib"
+					optimized "${AFTR_USERLAND_LIB_PATH}/PhysX/release/PhysXPvdSDK_static_64.lib"
+		             	debug "${AFTR_USERLAND_LIB_PATH}/PhysX/debug/PhysXPvdSDK_static_64.lib"
+ 					optimized "${AFTR_USERLAND_LIB_PATH}/irrKlang.lib"
+		            	debug "${AFTR_USERLAND_LIB_PATH}/irrKlang.lib"
+
                          )
 ENDIF()
 
@@ -104,6 +121,8 @@ ENDIF()
 TARGET_INCLUDE_DIRECTORIES( ${PROJECT_NAME} PRIVATE 
                            #"${AFTR_USR_INCLUDE_DIR}"
                            #"${CMAKE_SOURCE_DIR}/../my3rdPartyLib/include/"
+ 				  "${CMAKE_SOURCE_DIR}/include/PhysX"
+				   "${CMAKE_SOURCE_DIR}/include/irrKlang"
                           )
 
 

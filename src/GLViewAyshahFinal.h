@@ -1,10 +1,23 @@
 #pragma once
 
 #include "GLView.h"
+#include "GLView.h"
+#include "irrklang.h"
+#include "PxPhysicsAPI.h"
+#include "extensions\PxDefaultErrorCallback.h"
+#include "extensions\PxDefaultAllocator.h"
+#include "PhysicsCrate.h"
+#include "MyPhysics.h"
+#include "PhysicsFruit.h"
+
+using namespace irrklang;
 
 namespace Aftr
 {
    class Camera;
+   class Camera;
+   class irrklang;
+   class PhysXManager;
 
 /**
    \class GLViewAyshahFinal
@@ -32,10 +45,34 @@ public:
    virtual void onMouseMove( const SDL_MouseMotionEvent& e );
    virtual void onKeyDown( const SDL_KeyboardEvent& key );
    virtual void onKeyUp( const SDL_KeyboardEvent& key );
-
+   void checkCollision();
+   bool IsMoving = true;
+   float gravity_x = 0, gravity_y = 0, gravity_z = -50.0f;
 protected:
    GLViewAyshahFinal( const std::vector< std::string >& args );
-   virtual void onCreate();   
+   virtual void onCreate();
+
+private:
+    WO* Crash = nullptr;
+    WO* Crystal = nullptr;
+    WO* Crates = nullptr;
+
+    float Crash_posx = 0, Crash_posy = 0, Crash_posz = -18.0f;
+    float Crash_roglobx = 0, Crash_rogloby = 0, Crash_roglobz = 0;
+    float Crash_rorelx = 0, Crash_rorely = 0, Crash_rorelz = 0;
+
+    PhysXManager* PhysicsManager = nullptr;
+    ISoundEngine* engine = nullptr;
+
+    ISoundSource* soundMusic = nullptr;
+    ISoundSource* soundCrate = nullptr;
+    ISoundSource* soundSpinning = nullptr;
+    ISoundSource* soundFruit = nullptr;
+    ISoundSource* soundCrystal = nullptr;
+
+    std::vector<int> crateIDs;
+    std::vector<int> fruitIDs;
+    std::vector<int> crystalIDs;
 };
 
 /** \} */
